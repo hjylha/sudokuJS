@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fin">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- otsikko ja valinta 9x9 tai 16x16 sudokun välillä? -->
+    <header>
+        <h2>Sudoku</h2>
+    </header>
+
+    <div class="game-area">
+        <div>
+            <!-- ruudukko -->
+            <div class="grid">
+                <!-- aluksi 9 x 9 ruutua -->
+                <!-- ensin 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- toiset 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 3. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 4. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 5. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 6. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 7. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 8. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <!-- 9. 9 ruutua -->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                
+            </div>
+            <!-- error ilmoitus -->
+            <div class="error-bar">
+                Tämä teksti tässä pitääkin lukea
+            </div>
+        </div>
+        <!-- painikkeet -->
+        <div class="buttons">
+            <button class="button" id="emptyAllBtn">tyhjennä kaikki</button>
+            <button class="button" id="emptyBtn">tyhjennä ei-alkuarvot</button>
+            <button class="button" id="initialValueBtn">Alkuarvomoodi on päällä</button>
+            <button class="button" id="easyBtn">helppo sijoitus</button>
+            <button class="button" id="solveBtn">ratkaise sudoku</button>
+        </div>
+        <!-- koon valinta: 9x9 vai 16x16 -->
+        <div class="size-selection">
+            <div class="size-title">
+                <h3>Sudokun koko:</h3>
+            </div>
+            <article class="size">
+                <div class="size-select-title">
+                    <!-- <p>9 x 9</p> -->
+                    9 x 9
+                    <button type="button" class="size-select-btn">
+                        <span class="plus-icon">
+                            +
+                          <!-- <i class="far fa-plus-square"></i> -->
+                        </span>
+                        <span class="minus-icon">
+                            -
+                          <!-- <i class="far fa-minus-square"></i> -->
+                        </span>
+                      </button>
+                </div>
+                <div class="size-select-text">
+                    <p>
+                        Aseta jokaiseen riviin, sarakkeeseen ja 3x3-neliöön numerot 1-9 siten, että 
+                        kukin numero esiintyy kussakin rivissä, sarakkeessa ja neliössä tasan yhden kerran.
+                    </p>
+                    <button class="switch-size-btn" id="9x9">Muuta sudokun kooksi 9x9</button>
+                </div>
+            </article>
+            <article class="size">
+                <div class="size-select-title">
+                    <!-- <p>16 x 16</p> -->
+                    16 x 16
+                    <button type="button" class="size-select-btn">
+                        <span class="plus-icon">
+                            +
+                          <!-- <i class="far fa-plus-square"></i> -->
+                        </span>
+                        <span class="minus-icon">
+                            -
+                          <!-- <i class="far fa-minus-square"></i> -->
+                        </span>
+                      </button>
+                </div>
+                <div class="size-select-text">
+                    <p>
+                        Aseta jokaiseen riviin, sarakkeeseen ja 4x4-laatikkoon numerot 1-9 ja kirjaimet A-G siten, että
+                        kukin numero ja kirjain esiintyy kussakin rivissä, sarakkeessa ja neliössä tasan yhden kerran.
+                    </p>
+                    <button class="switch-size-btn" id="16x16">Muuta sudokun kooksi 16x16</button>
+                </div>        
+            </article>
+            
+        </div>
+    </div>
+    
+    <!-- javascript -->
+    <script src="sudoku.js"></script>
+</body>
+</html>
